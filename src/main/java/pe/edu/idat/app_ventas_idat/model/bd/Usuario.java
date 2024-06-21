@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.lang.model.element.NestingKind;
+import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -21,4 +23,8 @@ public class Usuario {
     private String nombres;
     private  String apellidos;
     private Integer activo;
+
+    @ManyToMany(cascade =CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(name="usuario_rol", joinColumns = @JoinColumn(name = "idusuario"),inverseJoinColumns =@JoinColumn(name="idrol") )
+    private Set<Rol> rol;
 }

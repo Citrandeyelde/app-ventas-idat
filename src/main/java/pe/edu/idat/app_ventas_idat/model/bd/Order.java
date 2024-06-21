@@ -29,6 +29,7 @@ public class Order {
     private String shippostalcode;
     private String shipcountry;
     @ManyToOne
+
     @JoinColumn (name="customerid")
     private Customer customer;
     @ManyToOne

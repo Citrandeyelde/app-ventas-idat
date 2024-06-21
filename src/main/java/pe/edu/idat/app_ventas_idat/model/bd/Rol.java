@@ -1,13 +1,14 @@
 package pe.edu.idat.app_ventas_idat.model.bd;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Getter
+@Entity
 @Setter
 @Table(name="rol")
 public class Rol {
@@ -16,4 +17,6 @@ public class Rol {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idrol;
     private String nomrol;
+    @ManyToMany(mappedBy = "rol")
+    private Set<Usuario> usuarios=new HashSet<>();
 }
