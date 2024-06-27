@@ -1,4 +1,4 @@
-package pe.edu.idat.app_ventas_idat.repository;
+package pe.edu.idat.app_ventas_idat.service;
 
 import pe.edu.idat.app_ventas_idat.model.bd.Supplier;
 
