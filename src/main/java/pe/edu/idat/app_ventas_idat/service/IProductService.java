@@ -7,5 +7,5 @@ import java.util.List;
 public interface IProductService {
     List<Product> listarProducto();
     Product guardarProductos(Product product);
-    Product obtenerProducto(Integer idproducto);
-}
+    Product obtenerProducto(Integer idproducto);}
+

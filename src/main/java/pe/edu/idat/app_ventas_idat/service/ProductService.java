@@ -21,8 +21,10 @@ public class ProductService implements IProductService{
         return productRepository.save(product);
     }
 
+
     @Override
     public Product obtenerProducto(Integer idproducto) {
         return productRepository.findById(idproducto).orElse(null);
     }
+
 }

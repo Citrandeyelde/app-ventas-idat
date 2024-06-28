@@ -1,6 +1,8 @@
 package pe.edu.idat.app_ventas_idat.model.bd;
 
+
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
